@@ -7,8 +7,23 @@
 <script>
 
 const logout = async (e) => {
-//Include the code for logout here.
+    e.preventDefault(); // Empêche l'action par défaut du lien
+    let logout_url = window.location.origin + "/djangoapp/logout";
+    const res = await fetch(logout_url, {
+        method: "GET",
+    });
+
+    const json = await res.json();
+    if (json.userName) {
+        let username = json.userName;
+        sessionStorage.removeItem('username');
+        window.location.href = window.location.origin;
+        alert("Logging out " + username + "...");
+    } else {
+        alert("The user could not be logged out. " + (json.error || ""));
+    }
 };
+
 
 let checkSession = ()=>{
   let curr_user = sessionStorage.getItem("username");

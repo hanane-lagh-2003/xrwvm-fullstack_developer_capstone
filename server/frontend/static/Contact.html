@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+        }
+
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .header-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-block {
+            margin-bottom: 30px;
+        }
+
+        .contact-block h2 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        .contact-block p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="voitures.html">Nos Voitures</a>
+        <a href="Contact.html" class="active">Contactez-nous</a>
+    </nav>
+
+    <div class="container">
+        <!-- Image centrée -->
+        <img src="/static/contactus.jpg" alt="Contactez-nous" class="header-image">
+
+        <!-- Contenu de contact -->
+        <div class="contact-block">
+            <h2>Service Client</h2>
+            <p>Email : support@dealership.com</p>
+            <p>Téléphone : +212 5 22 00 00 00</p>
+        </div>
+
+        <div class="contact-block">
+            <h2>Équipe Internationale de Publicité</h2>
+            <p>Email : advertising@dealership.com</p>
+        </div>
+
+        <div class="contact-block">
+            <h2>Relations Partenaires</h2>
+            <p>Email : partners@dealership.com</p>
+        </div>
+    </div>
+
+</body>
+</html>
